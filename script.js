@@ -1,8 +1,3 @@
-
-/* ========================================
-   MOBILE NAVIGATION
-======================================== */
-
 const menuButton = document.getElementById("menuButton");
 const mobileMenu = document.getElementById("mobileMenu");
 
@@ -29,10 +24,6 @@ document.querySelectorAll(".mobile-link").forEach((link) => {
 });
 
 
-/* =========================================
-   ACTIVE NAVIGATION HIGHLIGHT
-========================================= */
-
 const allNavLinks = document.querySelectorAll(
   '.nav-link, .mobile-link'
 );
@@ -41,7 +32,7 @@ const pageSections = document.querySelectorAll(
   '#home, #about, #skills, #projects, #experience, #contact'
 );
 
-// Smoothly highlight the navigation link for the visible section.
+
 function setActiveNav(sectionId) {
   allNavLinks.forEach((link) => {
     const isActive = link.getAttribute('href') === `#${sectionId}`;
@@ -56,7 +47,7 @@ function setActiveNav(sectionId) {
   });
 }
 
-// Observe sections while scrolling.
+
 const sectionObserver = new IntersectionObserver(
   (entries) => {
     const visibleSections = entries
@@ -81,7 +72,6 @@ pageSections.forEach((section) => {
   sectionObserver.observe(section);
 });
 
-// Highlight immediately when a navigation link is clicked.
 allNavLinks.forEach((link) => {
   link.addEventListener('click', () => {
     const sectionId = link.getAttribute('href')?.slice(1);
@@ -92,7 +82,7 @@ allNavLinks.forEach((link) => {
   });
 });
 
-// Set the initial active link.
+
 const initialSection = window.location.hash.slice(1);
 
 if (initialSection && document.getElementById(initialSection)) {
@@ -100,10 +90,6 @@ if (initialSection && document.getElementById(initialSection)) {
 } else {
   setActiveNav('home');
 }
-
-/* ========================================
-   ANIMATED JOB TITLE
-======================================== */
 
 const typedText = document.getElementById("typedText");
 
@@ -143,12 +129,7 @@ function typeTitle() {
   setTimeout(typeTitle, delay);
 }
 
-// Start with the first title already visible.
 setTimeout(typeTitle, 1400);
-
-/* ========================================
-   SCROLL REVEAL
-======================================== */
 
 const revealElements = document.querySelectorAll(".reveal");
 
@@ -172,26 +153,14 @@ if ("IntersectionObserver" in window) {
     revealObserver.observe(element);
   });
 } else {
-  // Fallback for older browsers.
   revealElements.forEach((element) => {
     element.classList.add("visible");
   });
 }
 
-/* ========================================
-   COPYRIGHT YEAR
-======================================== */
-
 document.getElementById("currentYear").textContent =
   new Date().getFullYear();
 
-
-
-/* =========================================
-   CONTACT MODAL + EMAILJS
-========================================= */
-
-// Replace these with your real EmailJS values.
 const EMAILJS_PUBLIC_KEY = "xcI1Wbzk38Ehu5cJ3";
 const EMAILJS_SERVICE_ID = "service_40sudt6";
 const EMAILJS_TEMPLATE_ID = "template_nv5h7ei";
@@ -249,7 +218,6 @@ contactModal?.querySelectorAll("[data-close-modal]").forEach((element) => {
   element.addEventListener("click", closeModal);
 });
 
-// Close the modal using Escape.
 document.addEventListener("keydown", (event) => {
   if (
     event.key === "Escape" &&
@@ -259,7 +227,6 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-// Keep keyboard focus inside the open modal.
 contactDialog?.addEventListener("keydown", (event) => {
   if (event.key !== "Tab") return;
 
@@ -283,13 +250,12 @@ contactDialog?.addEventListener("keydown", (event) => {
   }
 });
 
-// Submit contact form through EmailJS.
+
 contactForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   if (!contactForm.reportValidity()) return;
 
-  // Simple honeypot spam check.
   const honeypot = contactForm.querySelector('[name="website"]');
 
   if (honeypot?.value.trim()) {
