@@ -1,0 +1,967 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Personal portfolio of a software developer.">
+  <title>Sharmila Portfolio</title>
+
+  <!-- Tailwind CSS browser CDN: suitable for prototyping -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-black text-white antialiased">
+
+  <!-- Background effects -->
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 z-50 w-full border-b border-white/10
+                 bg-black/75 backdrop-blur-xl">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-10">
+
+      <a href="#home" class="text-2xl font-extrabold tracking-tight">
+        <span class="text-purple-400">Antony </span>Sharmila<span class="text-purple-400"> A</span>
+      </a>
+
+      <div class="hidden items-center gap-8 md:flex">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+
+      <a href="#contact"
+         class="hidden rounded-full bg-[#2A0081] px-5 py-2.5 text-sm
+                font-semibold transition hover:bg-purple-700 md:inline-flex">
+        Let's Talk ↗
+      </a>
+
+      <button id="menuButton"
+              class="rounded-lg border border-white/15 px-3 py-2 text-xl
+                     md:hidden"
+              aria-label="Open navigation menu"
+              aria-expanded="false"
+              aria-controls="mobileMenu">
+        ☰
+      </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden border-t border-white/10 bg-black/95 px-6 py-5 md:hidden">
+      <div class="flex flex-col gap-5">
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#experience" class="mobile-link">Experience</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home"
+             class="relative mx-auto grid min-h-screen max-w-7xl
+                    items-center gap-12 px-5 pb-16 pt-32 md:grid-cols-2
+                    md:px-10 md:pt-24">
+
+      <div class="reveal relative z-10 order-2 md:order-1">
+        <div class="mb-7 inline-flex items-center gap-3 rounded-full
+                    border border-purple-400/30 bg-purple-500/10 px-4 py-2">
+          <span class="h-2 w-2 animate-pulse rounded-full bg-purple-400"></span>
+          <span class="text-sm text-purple-200">Available for opportunities</span>
+        </div>
+
+        <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-purple-300">
+          Hello, I'm
+        </p>
+
+        <h1 class="text-5xl font-extrabold leading-tight tracking-tight
+                   sm:text-6xl lg:text-7xl">
+          Antony <span class="gradient-text">Sharmila</span>
+        </h1>
+
+        <h2 class="mt-5 text-2xl font-semibold text-gray-300 sm:text-3xl">
+          I'm a <span id="typedText" class="text-purple-400">Python / Django Developer</span><span class="typing-cursor">|</span>
+        </h2>
+
+        <p class="mt-6 max-w-xl text-base leading-8 text-gray-400 md:text-lg">
+          I build useful web applications, create clean APIs and turn
+          ideas into practical digital experiences through code.
+        </p>
+
+        <div class="mt-9 flex flex-wrap gap-4">
+          <a href="#projects" class="primary-button">
+            Explore My Work <span>↗</span>
+          </a>
+          <a href="#contact" class="secondary-button">
+            Contact Me
+          </a>
+        </div>
+
+        <div class="mt-10 flex items-center gap-5 text-sm text-gray-400">
+          <a href="https://github.com/" target="_blank"
+             rel="noopener noreferrer" class="social-link">GitHub ↗</a>
+          <a href="https://www.linkedin.com/" target="_blank"
+             rel="noopener noreferrer" class="social-link">LinkedIn ↗</a>
+        </div>
+      </div>
+
+      <!-- Right-side portrait with fading effect -->
+      <div class="portrait-wrapper reveal order-1 mx-auto w-full max-w-md md:order-2">
+        <div class="portrait-glow"></div>
+
+        <div class="portrait-frame">
+          <!-- Replace this image with images/profile.jpg -->
+          <img
+            src="../portfolio/assets/profile_image.png"
+            alt="Portrait placeholder for the portfolio owner"
+            class="portrait-image"
+            fetchpriority="high"
+          >
+          <div class="portrait-overlay"></div>
+
+          <div class="portrait-label">
+            <span class="text-sm text-gray-300">CREATIVE MINDSET</span>
+            <span class="text-xl font-bold">Building with purpose.</span>
+          </div>
+        </div>
+
+        <div class="floating-tag tag-top">✦ Creative Developer</div>
+        <div class="floating-tag tag-bottom">{"</>"} Clean Code</div>
+      </div>
+
+      <a href="#about"
+         class="absolute bottom-8 left-1/2 hidden -translate-x-1/2
+                items-center gap-2 text-xs tracking-widest text-gray-500
+                transition hover:text-purple-300 md:flex">
+        SCROLL TO EXPLORE <span class="animate-bounce">↓</span>
+      </a>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section-container">
+      <div class="section-heading reveal">
+        <p class="section-kicker">GET TO KNOW ME</p>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      </div>
+
+      <div class="grid gap-10 md:grid-cols-2 md:items-center">
+        <div class="reveal">
+          <p class="text-lg leading-9 text-gray-300">
+            I'm a developer who enjoys solving problems and building
+            reliable, user-friendly applications.
+          </p>
+          <p class="mt-5 leading-8 text-gray-400">
+            I focus on writing maintainable code, learning modern
+            technologies and creating solutions that make a difference.
+            This section will tell your real story once you share your details.
+          </p>
+          <a href="#contact" class="inline-flex items-center gap-2
+                                    mt-7 font-semibold text-purple-300
+                                    hover:text-purple-200">
+            Let's connect <span>↗</span>
+          </a>
+        </div>
+
+        
+        <div class="grid grid-cols-2 gap-4 reveal">
+
+        <!-- Total Experience -->
+        <div class="stat-card">
+            <p class="stat-number">1<span>+</span></p>
+            <p class="mt-2 text-sm text-gray-400">
+            Year of Experience
+            </p>
+        </div>
+
+        <!-- Current Company -->
+        <div class="stat-card">
+            <p class="stat-number">06<span></span></p>
+            <p class="mt-2 text-sm text-gray-400">
+            Months at Cybexel Technologies
+            </p>
+        </div>
+
+        <!-- Freelancing -->
+        <div class="stat-card">
+            <p class="stat-number">04<span></span></p>
+            <p class="mt-2 text-sm text-gray-400">
+            Months Freelancing
+            </p>
+        </div>
+
+        <!-- Internship -->
+        <div class="stat-card">
+            <p class="stat-number">04<span></span></p>
+            <p class="mt-2 text-sm text-gray-400">
+            Months as Django Developer Intern
+            </p>
+        </div>
+
+        </div>  
+
+      </div>
+    </section>
+
+    
+<section id="skills" class="section-container">
+  <div class="section-heading reveal">
+    <p class="section-kicker">WHAT I WORK WITH</p>
+    <h2 class="section-title">
+      Technical <span class="gradient-text">Skills</span>
+    </h2>
+    <p class="section-description">
+      Technologies I use to bring ideas to life.
+    </p>
+  </div>
+
+  <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+    <!-- Python -->
+    <article class="skill-card reveal">
+      <span class="skill-icon">
+          <img src="../portfolio/assets/python.png" alt="Python">
+      </span>
+      <h3 class="mt-5 text-xl font-bold">Python</h3>
+      <p class="mt-3 text-sm leading-7 text-gray-400">
+        Application logic, scripting and backend development.
+      </p>
+      <div class="skill-tags">
+        <span>Python</span><span>Problem Solving</span>
+      </div>
+    </article>
+
+    <!-- Django -->
+    <article class="skill-card reveal">
+      <span class="skill-icon">
+          <img src="../portfolio/assets/django.png" alt="Django">
+      </span>
+      <h3 class="mt-5 text-xl font-bold">Django & DRF</h3>
+      <p class="mt-3 text-sm leading-7 text-gray-400">
+        Backend applications, REST APIs, authentication and CRUD.
+      </p>
+      <div class="skill-tags">
+        <span>Django</span><span>REST API</span>
+      </div>
+    </article>
+
+    <!-- Databases -->
+    <article class="skill-card reveal">
+      <span class="skill-icon">
+          <img src="../portfolio/assets/database.png" alt="">
+      </span>
+      <h3 class="mt-5 text-xl font-bold">Databases</h3>
+      <p class="mt-3 text-sm leading-7 text-gray-400">
+        Data modeling, queries and relational database concepts.
+      </p>
+      <div class="skill-tags">
+        <span>SQLite</span><span>PostgreSQL</span>
+      </div>
+    </article>
+
+    <!-- Frontend -->
+    <article class="skill-card reveal">
+      <span class="skill-icon">
+          <img src="../portfolio/assets/frontend.png" alt="">
+      </span>
+      <h3 class="mt-5 text-xl font-bold">Frontend</h3>
+      <p class="mt-3 text-sm leading-7 text-gray-400">
+        Responsive layouts and interactive user interfaces.
+      </p>
+      <div class="skill-tags">
+        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+      </div>
+    </article>
+
+    <!-- Developer Tools -->
+    <article class="skill-card reveal">
+      <span class="skill-icon">
+          <img src="../portfolio/assets/devtools.png" alt="">
+      </span>
+      <h3 class="mt-5 text-xl font-bold">Developer Tools</h3>
+      <p class="mt-3 text-sm leading-7 text-gray-400">
+        Writing, debugging and managing application code.
+      </p>
+      <div class="skill-tags">
+        <span>GitHub</span><span>VS Code</span>
+      </div>
+    </article>
+
+    <!-- API Development -->
+    <article class="skill-card reveal">
+      <span class="skill-icon">
+          <img src="../portfolio/assets/api.png" alt="">
+      </span>
+      <h3 class="mt-5 text-xl font-bold">API Development</h3>
+      <p class="mt-3 text-sm leading-7 text-gray-400">
+        Building and integrating web services and API endpoints.
+      </p>
+      <div class="skill-tags">
+        <span>JWT</span><span>JSON</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="projects" class="section-container">
+
+  <div class="section-heading reveal">
+    <p class="section-kicker">SELECTED WORK</p>
+
+    <h2 class="section-title">
+      Featured <span class="gradient-text">Projects</span>
+    </h2>
+
+    <p class="section-description">
+      Backend solutions, REST APIs and practical applications
+      built with Python and Django.
+    </p>
+  </div>
+
+  <div class="grid gap-6 md:grid-cols-2">
+
+    <!-- PROJECT 01: TASK MANAGER API -->
+    <article class="project-card reveal">
+
+      <div class="api-visual task-visual">
+
+        <div class="visual-top">
+          <span class="visual-number">01 / 04</span>
+          <span class="visual-category">REST API</span>
+        </div>
+
+        <div class="api-window task-window">
+          <div class="api-window-header">
+            <div class="window-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span>tasks/views.py</span>
+            <span class="window-label">PY</span>
+          </div>
+
+          <div class="api-code">
+            <p><span class="code-purple">class</span> TaskViewSet:</p>
+            <p>&nbsp;&nbsp;permission_classes =</p>
+            <p>&nbsp;&nbsp;[IsAuthenticated]</p>
+
+            <div class="code-divider"></div>
+
+            <p>
+              <span class="method-get">GET</span>
+              /api/tasks/
+            </p>
+
+            <div class="response-heading">
+              <span>JSON RESPONSE</span>
+              <span class="response-status">EXAMPLE</span>
+            </div>
+
+            <div class="json-box">
+              <p>{</p>
+              <p>&nbsp;&nbsp;<span class="json-key">"title"</span>:
+                <span class="json-string">"Complete project"</span>,</p>
+              <p>&nbsp;&nbsp;<span class="json-key">"status"</span>:
+                <span class="json-string">"pending"</span></p>
+              <p>}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="floating-tech task-float">JWT</div>
+        <div class="api-decoration"></div>
+      </div>
+
+      <div class="project-content">
+        <div class="project-heading-row">
+          <h3 class="project-title">Task Manager API</h3>
+          <span class="project-mini-icon">↗</span>
+        </div>
+
+        <p class="project-description">
+          A task management API with user authentication,
+          task CRUD operations and role-based permissions.
+        </p>
+
+        <div class="skill-tags project-tags">
+          <span>Python</span>
+          <span>Django REST Framework</span>
+          <span>JWT</span>
+        </div>
+
+        <div class="project-footer">
+          <span class="project-type">BACKEND DEVELOPMENT</span>
+          <a
+            href="https://github.com/YOUR_USERNAME/YOUR_TASK_MANAGER_REPO"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            View Project <span>↗</span>
+          </a>
+        </div>
+      </div>
+    </article>
+
+
+    <!-- PROJECT 02: LIBRARY MANAGEMENT -->
+    <article class="project-card reveal">
+
+      <div class="api-visual library-visual">
+
+        <div class="visual-top">
+          <span class="visual-number">02 / 04</span>
+          <span class="visual-category">LIBRARY API</span>
+        </div>
+
+        <div class="api-window library-window">
+          <div class="api-window-header">
+            <div class="window-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span>books/serializers.py</span>
+            <span class="window-label">DJ</span>
+          </div>
+
+          <div class="api-code">
+            <p><span class="code-purple">class</span> BookSerializer:</p>
+            <p>&nbsp;&nbsp;model = Book</p>
+            <p>&nbsp;&nbsp;fields = <span class="code-green">"__all__"</span></p>
+
+            <div class="code-divider"></div>
+
+            <p>
+              <span class="method-get">GET</span>
+              /api/books/
+            </p>
+
+            <div class="response-heading">
+              <span>JSON RESPONSE</span>
+              <span class="response-status">EXAMPLE</span>
+            </div>
+
+            <div class="json-box">
+              <p>{</p>
+              <p>&nbsp;&nbsp;<span class="json-key">"title"</span>:
+                <span class="json-string">"Django Basics"</span>,</p>
+              <p>&nbsp;&nbsp;<span class="json-key">"available"</span>:
+                <span class="code-green">true</span></p>
+              <p>}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="floating-tech library-float">DB</div>
+        <div class="api-decoration"></div>
+      </div>
+
+      <div class="project-content">
+        <div class="project-heading-row">
+          <h3 class="project-title">Library Management System</h3>
+          <span class="project-mini-icon">↗</span>
+        </div>
+
+        <p class="project-description">
+          A library application for managing books, borrowing,
+          returning and library records.
+        </p>
+
+        <div class="skill-tags project-tags">
+          <span>Python</span>
+          <span>Django</span>
+          <span>SQLite</span>
+        </div>
+
+        <div class="project-footer">
+          <span class="project-type">WEB APPLICATION</span>
+          <a
+            href="https://github.com/YOUR_USERNAME/YOUR_LIBRARY_REPO"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            View Project <span>↗</span>
+          </a>
+        </div>
+      </div>
+    </article>
+
+
+    <!-- PROJECT 03: BLOG API -->
+    <article class="project-card reveal">
+
+      <div class="api-visual blog-visual">
+
+        <div class="visual-top">
+          <span class="visual-number">03 / 04</span>
+          <span class="visual-category">CONTENT API</span>
+        </div>
+
+        <div class="api-window blog-window">
+          <div class="api-window-header">
+            <div class="window-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span>posts/views.py</span>
+            <span class="window-label">API</span>
+          </div>
+
+          <div class="api-code">
+            <p><span class="code-purple">class</span> PostViewSet:</p>
+            <p>&nbsp;&nbsp;serializer_class =</p>
+            <p>&nbsp;&nbsp;PostSerializer</p>
+
+            <div class="code-divider"></div>
+
+            <p>
+              <span class="method-post">POST</span>
+              /api/posts/
+            </p>
+
+            <div class="response-heading">
+              <span>JSON RESPONSE</span>
+              <span class="response-status">EXAMPLE</span>
+            </div>
+
+            <div class="json-box">
+              <p>{</p>
+              <p>&nbsp;&nbsp;<span class="json-key">"title"</span>:
+                <span class="json-string">"My First Blog"</span>,</p>
+              <p>&nbsp;&nbsp;<span class="json-key">"content"</span>:
+                <span class="json-string">"Hello world..."</span></p>
+              <p>}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="floating-tech blog-float">&lt;/&gt;</div>
+        <div class="api-decoration"></div>
+      </div>
+
+      <div class="project-content">
+        <div class="project-heading-row">
+          <h3 class="project-title">Blog API</h3>
+          <span class="project-mini-icon">↗</span>
+        </div>
+
+        <p class="project-description">
+          A REST API for blog posts and comments with CRUD
+          endpoints and controlled access.
+        </p>
+
+        <div class="skill-tags project-tags">
+          <span>Django</span>
+          <span>DRF</span>
+          <span>CRUD</span>
+        </div>
+
+        <div class="project-footer">
+          <span class="project-type">REST API DEVELOPMENT</span>
+          <a
+            href="https://github.com/YOUR_USERNAME/YOUR_BLOG_API_REPO"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            View Project <span>↗</span>
+          </a>
+        </div>
+      </div>
+    </article>
+    <article class="project-card reveal">
+
+      <div class="api-visual product-visual">
+
+        <div class="visual-top">
+          <span class="visual-number">04 / 04</span>
+          <span class="visual-category">PRODUCT API</span>
+        </div>
+
+        <div class="api-window product-window">
+          <div class="api-window-header">
+            <div class="window-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span>products/views.py</span>
+            <span class="window-label">DRF</span>
+          </div>
+
+          <div class="api-code">
+            <p><span class="code-purple">class</span> ProductViewSet:</p>
+            <p>&nbsp;&nbsp;filter_backends =</p>
+            <p>&nbsp;&nbsp;[SearchFilter, OrderingFilter]</p>
+
+            <div class="code-divider"></div>
+
+            <p>
+              <span class="method-get">GET</span>
+              /api/products/?ordering=price
+            </p>
+
+            <div class="response-heading">
+              <span>JSON RESPONSE</span>
+              <span class="response-status">EXAMPLE</span>
+            </div>
+
+            <div class="json-box">
+              <p>{</p>
+              <p>&nbsp;&nbsp;<span class="json-key">"title"</span>:
+                <span class="json-string">"Laptop"</span>,</p>
+              <p>&nbsp;&nbsp;<span class="json-key">"price"</span>:
+                <span class="code-green">49999</span></p>
+              <p>}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="floating-tech product-float">UUID</div>
+        <div class="api-decoration"></div>
+      </div>
+
+      <div class="project-content">
+        <div class="project-heading-row">
+          <h3 class="project-title">Product Dashboard API</h3>
+          <span class="project-mini-icon">↗</span>
+        </div>
+
+        <p class="project-description">
+          A product management API with JWT authentication,
+          role-based permissions, CRUD operations, search
+          and price sorting.
+        </p>
+
+        <div class="skill-tags project-tags">
+          <span>Django REST Framework</span>
+          <span>JWT</span>
+          <span>UUID</span>
+        </div>
+
+        <div class="project-footer">
+          <span class="project-type">BACKEND SYSTEM</span>
+          <a
+            href="https://github.com/YOUR_USERNAME/YOUR_PRODUCT_DASHBOARD_REPO"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            View Project <span>↗</span>
+          </a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="experience" class="section-container">
+
+  <div class="section-heading reveal">
+    <p class="section-kicker">MY JOURNEY</p>
+    <h2 class="section-title">
+      Experience & <span class="gradient-text">Growth</span>
+    </h2>
+    <p class="section-description">
+      My journey through backend development, freelance projects
+      and professional experience.
+    </p>
+  </div>
+
+  <div class="timeline reveal">
+
+    <!-- Phase 1: Internship -->
+    <article class="timeline-item">
+      <span class="timeline-dot"></span>
+
+      <div class="timeline-content">
+        <div class="timeline-meta">
+          <span class="timeline-phase">PHASE 01</span>
+          <span class="timeline-duration">4 Months</span>
+        </div>
+
+        <p class="timeline-role-label">INTERNSHIP</p>
+
+        <h3 class="timeline-title">
+          Python / Django Developer Intern
+        </h3>
+
+        <p class="timeline-company">
+          Rubric Edge Solutions Private limited · 08/2025 to 12/2025
+        </p>
+
+        <p class="timeline-description">
+          Gained practical experience in Python and Django backend
+          development, REST API implementation and application
+          development workflows using VS Code.
+        </p>
+
+        <div class="timeline-tags">
+          <span>Python</span>
+          <span>Django</span>
+          <span>REST API</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Phase 2: Freelancing -->
+    <article class="timeline-item">
+      <span class="timeline-dot"></span>
+
+      <div class="timeline-content">
+        <div class="timeline-meta">
+          <span class="timeline-phase">PHASE 02</span>
+          <span class="timeline-duration">4 Months</span>
+        </div>
+
+        <p class="timeline-role-label">FREELANCE EXPERIENCE</p>
+
+        <h3 class="timeline-title">
+          Freelance Developer
+        </h3>
+
+        <p class="timeline-company">
+          Independent Projects · 01/2026 - 04/2026
+        </p>
+
+        <p class="timeline-description">
+          Worked independently on development tasks and projects,
+          applying programming skills to implement features,
+          solve technical problems and build practical solutions.
+        </p>
+
+        <div class="timeline-tags">
+          <span>Python</span>
+          <span>Django</span>
+          <span>API Development</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Phase 3: Cybexel Technologies -->
+    <article class="timeline-item">
+      <span class="timeline-dot"></span>
+
+      <div class="timeline-content">
+        <div class="timeline-meta">
+          <span class="timeline-phase">PHASE 03</span>
+          <span class="timeline-duration">Add duration</span>
+        </div>
+
+        <p class="timeline-role-label">PROFESSIONAL EXPERIENCE</p>
+
+        <h3 class="timeline-title">
+          Backend Developer
+        </h3>
+
+        <p class="timeline-company">
+          Cybexel Technologies Private Limited · BuySel Application
+        </p>
+
+        <p class="timeline-description">
+          Working on backend development for the BuySel application,
+          contributing to backend functionality, API development, Oauth implementation
+          and application features using the technologies relevant
+          to the project.
+        </p>
+
+        <div class="timeline-tags">
+          <span>Backend Development</span>
+          <span>Python</span>
+          <span>Django / APIs</span>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="section-container">
+      <div class="contact-panel reveal">
+        <p class="section-kicker">HAVE A PROJECT IN MIND?</p>
+        <h2 class="mt-4 text-4xl font-extrabold sm:text-5xl">
+          Let's build something <span class="gradient-text">great.</span>
+        </h2>
+        <p class="mx-auto mt-5 max-w-xl leading-8 text-gray-400">
+          I'm open to connecting with developers, teams and recruiters.
+          Feel free to reach out.
+        </p>
+
+        
+      <button
+        id="openContactModal"
+        type="button"
+        class="primary-button mt-8"
+        aria-haspopup="dialog"
+        aria-controls="contactModal"
+      >
+        Get In Touch <span>↗</span>
+      </button>
+
+
+        <div class="mt-8 flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+          <a href="https://github.com/" target="_blank"
+             rel="noopener noreferrer" class="social-link">GitHub ↗</a>
+          <a href="https://www.linkedin.com/" target="_blank"
+             rel="noopener noreferrer" class="social-link">LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+
+    
+<!-- Contact Modal -->
+<div
+  id="contactModal"
+  class="contact-modal"
+  aria-hidden="true"
+>
+  <div class="contact-modal-backdrop" data-close-modal></div>
+
+  <div
+    class="contact-modal-dialog"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="contactModalTitle"
+    aria-describedby="contactModalDescription"
+    tabindex="-1"
+  >
+    <button
+      type="button"
+      class="contact-modal-close"
+      data-close-modal
+      aria-label="Close contact form"
+    >
+      &times;
+    </button>
+
+    <div class="modal-heading">
+      <span class="modal-icon">✉</span>
+      <p class="section-kicker">LET'S CONNECT</p>
+
+      <h2 id="contactModalTitle">
+        Send me a <span class="gradient-text">message.</span>
+      </h2>
+
+      <p id="contactModalDescription">
+        Have an opportunity, a project idea, or just want to connect?
+        Fill in the details below and I'll get back to you.
+      </p>
+    </div>
+
+    <form id="contactForm" class="contact-form">
+      <div class="form-field">
+        <label for="contactName">Your name</label>
+        <input
+          id="contactName"
+          name="from_name"
+          type="text"
+          placeholder="Enter your full name"
+          autocomplete="name"
+          maxlength="100"
+          required
+        >
+      </div>
+
+      <div class="form-field">
+        <label for="contactEmail">Email address</label>
+        <input
+          id="contactEmail"
+          name="reply_to"
+          type="email"
+          placeholder="you@example.com"
+          autocomplete="email"
+          maxlength="254"
+          required
+        >
+      </div>
+
+      <div class="form-field">
+        <label for="contactSubject">Subject</label>
+        <input
+          id="contactSubject"
+          name="subject"
+          type="text"
+          placeholder="Job opportunity, project, collaboration..."
+          maxlength="150"
+          required
+        >
+      </div>
+
+      <div class="form-field">
+        <label for="contactMessage">Your message</label>
+        <textarea
+          id="contactMessage"
+          name="message"
+          rows="4"
+          placeholder="Tell me a little about what you have in mind..."
+          maxlength="5000"
+          required
+        ></textarea>
+      </div>
+
+      <!-- Anti-spam honeypot: keep hidden -->
+      <div class="contact-honeypot" aria-hidden="true">
+        <label for="contactWebsite">Leave this field empty</label>
+        <input
+          id="contactWebsite"
+          name="website"
+          type="text"
+          tabindex="-1"
+          autocomplete="off"
+        >
+      </div>
+
+      <p
+        id="contactFormStatus"
+        class="contact-form-status"
+        role="status"
+        aria-live="polite"
+      ></p>
+
+      <button
+        id="contactSubmit"
+        type="submit"
+        class="contact-submit"
+      >
+        <span class="submit-label">Send Message</span>
+        <span class="submit-arrow" aria-hidden="true">↗</span>
+      </button>
+
+      <p class="contact-privacy-note">
+        <span>✦</span> Your message will be sent securely through EmailJS.
+      </p>
+    </form>
+  </div>
+</div>
+
+   
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 px-5 py-7 text-center">
+    <p class="text-sm text-gray-500">
+      © <span id="currentYear"></span> Sharmi Built with care and code.
+    </p>
+  </footer>
+ 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
